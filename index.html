@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yaguel - Voyant</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* SLIDER VERTICAL EN HAUT */
+.top-slider {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.top-slider img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+}
+
+.top-slider img.active {
+    opacity: 1;
+}
+
+/* BOUTONS VERTICAUX */
+.top-slider .up, .top-slider .down {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    font-size: 30px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.top-slider .up {
+    top: 10px;
+}
+
+.top-slider .down {
+    bottom: 10px;
+}
+
+.top-slider button:hover {
+    background: rgba(0,0,0,0.8);
+}
+
+/* OVERLAY BIENVENUE */
+.hero {
+    position: relative;
+    padding: 50px 20px;
+    text-align: center;
+    background: #111;
+    color: white;
+}
+
+.subtitle {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    margin-top: 20px;
+    background: #25D366;
+    padding: 12px 25px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* SECTIONS */
+section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background: #f5f5f5;
+    padding: 20px;
+    width: 260px;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.card ul {
+    padding-left: 20px;
+}
+
+/* Témoignages */
+.testimonials {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.testimonials img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+/* WhatsApp flottant */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    color: white;
+    font-size: 24px;
+    padding: 15px;
+    border-radius: 50%;
+    text-decoration: none;
+}
+
+/* FOOTER */
+footer {
+    background: #111;
+    color: white;
+    padding: 20px;
+}
+
+/* RESPONSIVE */
+@media(max-width: 768px){
+    .services, .testimonials {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .testimonials img {
+        width: 90%;
+        height: auto;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- SLIDER VERTICAL EN HAUT -->
+<div class="top-slider">
+    <img src="C.jpg" class="active">
+    <img src="D.jpg">
+    <img src="E.jpg">
+    <img src="IMG-20260429-WA0064.jpg">
+    <img src="IMG-20260429-WA0060(1).jpg">
+    <img src="IMG-20260429-WA0072.jpg">
+    <img src="IMG-20260429-WA0071.jpg">
+    <img src="IMG-20260429-WA0073.jpg">
+    <img src="IMG-20260429-WA0075.jpg">
+
+    <button class="up">&#9650;</button>
+    <button class="down">&#9660;</button>
+</div>
+
+<!-- BIENVENUE -->
+<header class="hero">
+    <h1>Bienvenue chez Yaguel</h1>
+    <p class="subtitle">Votre voyant du jour</p>
+
+    <p>
+        Je suis <strong>Yaguel</strong>, spécialiste du retour affectif.  
+        J’aide chaque jour des personnes à retrouver l’amour et la paix.
+    </p>
+
+    <p>
+        Profitez actuellement de <strong>consultations gratuites</strong> pour éclairer votre vie
+        (amour, travail, avenir…).
+    </p>
+
+    <a class="btn" href="https://wa.me/22945271825">Me contacter sur WhatsApp</a>
+</header>
+
+<section>
+    <h2>À propos</h2>
+    <p>
+        Yaguel est un spécialiste reconnu dans le domaine spirituel, offrant des solutions
+        efficaces pour le retour affectif et l’équilibre personnel.
+    </p>
+</section>
+
+<section>
+    <h2>Mes services</h2>
+    <div class="services">
+
+        <div class="card">
+            <h3>Retour affectif</h3>
+            <p>Faites revenir l’être aimé rapidement.</p>
+            <ul>
+                <li>Faire revenir votre ex</li>
+                <li>Réveiller ses sentiments</li>
+                <li>Obtenir des excuses</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>Consultation</h3>
+            <p>Consultations gratuites :</p>
+            <ul>
+                <li>Amour</li>
+                <li>Travail</li>
+                <li>Avenir</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>Travaux spirituels</h3>
+            <ul>
+                <li>Désenvoûtement</li>
+                <li>Protection</li>
+                <li>Chance et réussite</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>Travail de la richesse</h3>
+            <p>Devenez riche sans conséquence grâce aux rituels puissants :</p>
+            <ul>
+                <li><strong>Portefeuille magique</strong> : Produit jusqu’à <strong>5000€ par jour</strong> pendant 20 ans</li>
+                <li><strong>Multiplication d’argent en 30 minutes</strong></li>
+                <li>50€ → 500€</li>
+                <li>100€ → 1000€</li>
+                <li>200€ → 2000€</li>
+                <li>300€ → 3000€</li>
+                <li>500€ → 5000€</li>
+                <li>1000€ → 10000€</li>
+                <li>Et bien plus...</li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+<!-- Témoignages -->
+<section>
+    <h2>Témoignages</h2>
+    <div class="testimonials">
+        <img src="A.jpg" alt="Témoignage 1">
+        <img src="B.jpg" alt="Témoignage 2">
+        <img src="IMG-20260429-WA0059.jpg" alt="Témoignage 3">
+    </div>
+</section>
+
+<section>
+    <h2>Contact</h2>
+    <p>WhatsApp : +229 45 27 18 25</p>
+</section>
+
+<footer>
+    <p>© 2026 Yaguel - Tous droits réservés</p>
+</footer>
+
+<!-- WhatsApp flottant -->
+<a href="https://wa.me/22945271825" class="whatsapp-float">💬</a>
+
+<script>
+let index = 0;
+const slides = document.querySelectorAll('.top-slider img');
+
+function showSlide(i) {
+    slides.forEach(slide => slide.classList.remove('active'));
+    slides[i].classList.add('active');
+}
+
+document.querySelector('.top-slider .down').onclick = () => {
+    index = (index + 1) % slides.length;
+    showSlide(index);
+};
+
+document.querySelector('.top-slider .up').onclick = () => {
+    index = (index - 1 + slides.length) % slides.length;
+    showSlide(index);
+};
+</script>
+
+</body>
+</html>
